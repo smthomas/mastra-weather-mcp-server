@@ -15,7 +15,7 @@ let server: Server;
 server = new Server(
   {
     name: "Weather Tool Server",
-    version: `1.0.1`,
+    version: `1.0.2`,
   },
   {
     capabilities: {
