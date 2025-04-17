@@ -1,0 +1,42 @@
+{
+  "name": "@mastra/mcp-weather-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": "dist/stdio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev",
+    "build:mcp": "tsup src/mcp/stdio.ts --format esm --experimental-dts --treeshake=smallest --splitting"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.16",
+    "@mastra/core": "^0.8.3",
+    "@mastra/mcp": "^0.3.10",
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "date-fns": "^4.1.0",
+    "exit-hook": "^4.0.0",
+    "jsdom": "^26.1.0",
+    "mastra": "^0.4.9",
+    "turndown": "^7.2.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.3",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.14.1",
+    "@microsoft/api-extractor": "^7.52.4",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.14.1",
+    "@types/turndown": "^5.0.5",
+    "@wong2/mcp-cli": "^1.6.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
