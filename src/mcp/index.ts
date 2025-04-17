@@ -80,7 +80,14 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       tool: request.params.name,
       duration: `${duration}ms`,
     });
-    return result;
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(result)
+        }
+      ]
+    };
   } catch (error) {
     const duration = Date.now() - startTime;
     if (error instanceof z.ZodError) {
