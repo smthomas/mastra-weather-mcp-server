@@ -14,8 +14,8 @@ let server: Server;
 
 server = new Server(
   {
-    name: "Mastra Documentation Server",
-    version: `0.0.1`,
+    name: "Weather Tool Server",
+    version: `1.0.1`,
   },
   {
     capabilities: {
@@ -84,9 +84,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       content: [
         {
           type: "text",
-          text: JSON.stringify(result)
-        }
-      ]
+          text: JSON.stringify(result),
+        },
+      ],
     };
   } catch (error) {
     const duration = Date.now() - startTime;
